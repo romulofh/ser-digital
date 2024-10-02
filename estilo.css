@@ -19,6 +19,10 @@ body {
     margin: auto;
 }
 
+.imagem {
+    text-align: center;
+}
+
 .header-menu {
     list-style-type: none;
     padding: 0;
@@ -110,6 +114,11 @@ img {
     padding: 1rem;
 }
 
+.testemunho_thumb{
+    width: 8.125rem;
+    height: 8.125rem;
+}
+
 .contato {
     background-color: var(--gray);
     border-radius: 5px;
@@ -123,7 +132,6 @@ img {
 
 .footer {
     background-color: var(--gray);
-    padding: 3rem 0;
 }
 
 .footer ul {
@@ -180,6 +188,44 @@ img {
 }
 
 @media screen and (min-width: 46.25em) {
+    body {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 3.625rem;
+    }
+
+    h2 {
+        font-size: 2.875rem;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-menu {
+        display: block;
+        margin: 0;
+    }
+
+    .header-menu li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    .testemunho {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .contato_image {
+        display: block;
+        text-align: center;
+    }
+
     .row {
         gap: 1rem;
     }
@@ -210,6 +256,16 @@ img {
 }
 
 @media screen and (min-width: 90em) {
+    .hero_title {
+        margin-bottom: 6.25rem;
+    }
+
+    .testemunho {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .row {
         gap: 3rem;
     }
@@ -238,11 +294,15 @@ img {
         grid-column: span 5;
     }
 
-    .lg-1-5 {
+    .row > .lg-1-5 {
         grid-column: 1 / 6;
     }
 
-    .lg-8-12 {
+    .row > .lg-1-7 {
+        grid-column: 1 / 8;
+    }
+
+    .row > .lg-8-12 {
         grid-column: 8 / 13;
     }
 }
